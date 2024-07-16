@@ -3,59 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Academic Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hellesoe Lui | Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
         <nav>
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#flask-app">Flask App</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section id="home">
+            <div class="hero">
+                <h1>Kia ora, I'm Hellesoe Lui</h1>
+                <p>Welcome to my personal website!</p>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+        </section>
+
         <section id="about">
             <h2>About Me</h2>
-            <!-- Add your bio here -->
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <!-- Add your education details here -->
-        </section>
-
-        <section id="research">
-            <h2>Research Experience</h2>
-            <!-- Add your research experience here -->
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <!-- Add your publications here -->
+            <p>I'm a passionate IT professional with a strong background in computer science and a love for innovation. My journey has taken me from being a dedicated student at Te Wānanga Aronui o Tāmaki Makau Rau to working as a Communication Co-Design Analyst at Te Whare Wānanga o Tāmaki Makaurau.</p>
+            <p>Throughout my career, I've had the privilege of working with renowned organisations like Deloitte and collaborating with expert researchers to drive positive change in the field of healthcare and education.</p>
+            <p>When I'm not immersed in the world of technology, you can find me exploring the fascinating realm of machine learning through Python scripts or sharing my knowledge as a teaching assistant.</p>
+            <a href="CV-2024 (1).docx" class="btn" download>Download CV</a>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <!-- Add your projects here -->
+            <div class="project">
+                <h3>Māori Map</h3>
+                <p>A map created using Python, Flask, and PythonAnywhere to host, utilising open-source GeoJSON data and hunting areas including traps and significant points for Māori.</p>
+                <a href="https://luih123456.pythonanywhere.com/" class="btn" target="_blank">View Project</a>
+            </div>
         </section>
 
-        <section id="flask-app">
-            <h2>Flask Application</h2>
-            <p>Description of your Flask app and its purpose.</p>
-            <a href="your-flask-app-url-here" target="_blank">View Flask App</a>
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication">
+                <h3>Te Hiringa Taketake: A Literature Review</h3>
+                <p>An article discussing the current trends of online learning during Covid and AUT's effort with Māori and STEM.</p>
+                <a href="https://www.teipukarea.maori.nz/assets/Docs/Te-Hiringa-Taketake-final.pdf" class="btn" target="_blank">Read Article</a>
+            </div>
+            <div class="publication">
+                <h3>Focus-Based Text Summarisation with Hybrid Embeddings</h3>
+                <p>A publication on Health and AI, incorporating domain-specific summarisation in Health leveraging LLM and big data.</p>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-97546-3_57" class="btn" target="_blank">Read Publication</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>I'm always excited to connect with like-minded individuals and discuss potential collaborations or opportunities. Feel free to reach out to me via email or phone.</p>
+            <ul>
+                <li>Email: <a href="mailto:hellesoelui@gmail.com">hellesoelui@gmail.com</a></li>
+                <li>Phone: +64 020 4149 2502</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Hellesoe Lui. All rights reserved.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
