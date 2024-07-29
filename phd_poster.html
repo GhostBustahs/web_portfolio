@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>Innovations in Low-Resource Language NLP</title>
+
+
+
+
+
+
+<style>
+@page {
+size: 45in 38in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 45in;
+height: 38in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 45in;
+height: 38in;
+padding: 0cm;
+}
+.title_container {
+width: 45in;
+height: calc(38in * 0.15);
+overflow: hidden;
+background-color: #0b4545;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(45in + 0 + 0);
+height: calc(38in * 0.83);
+padding-top: calc(38in * 0.005);
+padding-bottom: calc(38in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #0b4545;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Innovations in Low-Resource Language NLP</h1>
+<h3 id="author">Lui Hellesoe<sup>1</sup></h3><br>
+
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The field of Natural Language Processing (NLP) has seen significant advancements, particularly with the advent of Large Language Models (LLMs) that can handle vast amounts of data, often referred to as “big data”. However, Te Reo Māori remains a low-resource language due to the limited availability of linguistic resources necessary to develop these sophisticated models. Off-the-shelf (OTS) LLMs such as OpenAI’s ChatGPT, Anthropic’s Claude, and Meta’s LLaMA have demonstrated remarkable capabilities in various NLP tasks.</p>
+<div id="objectives" class="section level2">
+<h2>Objectives</h2>
+<ol style="list-style-type: decimal">
+<li>Evaluate OTS models on a translation task.</li>
+<li>Fine-tune one of these models on our Māori dataset.</li>
+<li>Highlight the challenges, strengths, and weaknesses in NLP for low-resource languages.</li>
+</ol>
+</div>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>This methodology is a two-part approach.</p>
+<p><strong>Part 1: OTS Model Evaluation</strong></p>
+<ul>
+<li><strong>Model API Used:</strong> ChatGPT 4.0, Claude 3.5, LLaMA 3.1.</li>
+<li><strong>Dataset:</strong> 100 Te Reo Māori words, broken into five themes: Pā, Health, Law, Education, and Business.</li>
+<li><strong>Evaluation Metrics:</strong> BLEU and METEOR scores compared to the gold standard from <a href="https://maoridictionary.co.nz/">Te Aka Dictionary</a></li>
+</ul>
+<p><strong>Part 2: Fine-Tuning</strong></p>
+<ul>
+<li><strong>Model Chosen for Fine-Tuning:</strong> LLaMA 3.1.</li>
+<li><strong>Dataset:</strong> <a href="https://huggingface.co/datasets/jinglishi0206/Maori_English_New_Zealand">7k sentence pairs of Māori and their English translations</a></li>
+</ul>
+<p><strong>Fine-Tuning Process:</strong></p>
+<ul>
+<li><strong>Data Preparation:</strong> Tokenised the dataset with a preprocessing function to ensure proper formatting for training.</li>
+<li><strong>Quantisation Configuration:</strong> Used 4-bit quantisation to reduce model size and memory usage, enabling training on hardware with limited resources.</li>
+<li><strong>Model Training:</strong>
+<ul>
+<li><strong>Base Model:</strong> Meta-Llama-3.1-8B-Instruct.</li>
+<li><strong>Quantisation Configuration:</strong> <code>load_in_4bit=True bnb_4bit_quant_type="nf4" bnb_4bit_compute_dtype=torch.bfloat16 bnb_4bit_use_double_quant=True</code></li>
+<li><strong>LoRA Configuration:</strong> Used LoRA (Low-Rank Adaptation) for parameter-efficient fine-tuning.</li>
+<li><strong>Training Arguments:</strong> Set up with parameters like <code>learning_rate=1e-4</code>, <code>per_device_train_batch_size=1</code>, and <code>gradient_accumulation_steps=128</code>.</li>
+</ul></li>
+</ul>
+<p>For the complete model training script, please visit my <a href="https://github.com/GhostBustahs/">GitHub</a>.</p>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<div id="evaluation-results" class="section level2">
+<h2>Evaluation Results:</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>BLEU (95% CI)</th>
+<th>METEOR (95% CI)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ChatGPT</td>
+<td>27.96 (23.85-32.08)</td>
+<td>0.58 (0.54-0.61)</td>
+</tr>
+<tr class="even">
+<td>LLaMA 3.1</td>
+<td>19.43 (15.38-23.48)</td>
+<td>0.44 (0.39-0.48)</td>
+</tr>
+<tr class="odd">
+<td>Claude</td>
+<td>25.39 (21.04-29.73)</td>
+<td>0.53 (0.48-0.57)</td>
+</tr>
+<tr class="even">
+<td>Fine-tuned</td>
+<td>1.06 (0.67-1.44)</td>
+<td>0.07 (0.05-0.09)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="statistical-significance-tests-p-values" class="section level2">
+<h2>Statistical Significance Tests (p-values):</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Comparison</th>
+<th>BLEU</th>
+<th>METEOR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ChatGPT vs LLaMA</td>
+<td>0.0038</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>ChatGPT vs Claude</td>
+<td>0.3943</td>
+<td>0.0877</td>
+</tr>
+<tr class="odd">
+<td>ChatGPT vs Fine-tuned</td>
+<td>0.0000</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>LLaMA vs Claude</td>
+<td>0.0480</td>
+<td>0.0066</td>
+</tr>
+<tr class="odd">
+<td>LLaMA vs Fine-tuned</td>
+<td>0.0000</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>Claude vs Fine-tuned</td>
+<td>0.0000</td>
+<td>0.0000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="figures" class="section level2">
+<h2>Figures</h2>
+<p><img src="phd_poster_files/figure-html/bleu_vs_length.png" alt="BLEU vs Length" />
+<em>Figure 1: BLEU scores vs Sentence Length</em></p>
+<p><img src="phd_poster_files/figure-html/length_distribution.png" alt="Length Distribution" />
+<em>Figure 2: Length Distribution of Sentence Pairs</em></p>
+<p>The fine-tuned model showed significant performance issues, with BLEU and METEOR scores much lower than the OTS models. This is likely due to the limited size of the training dataset (7k sentence pairs), which was insufficient for the model to learn effectively. The performance drop of the fine-tuned model across varying sentence lengths suggests that the model struggled to generalise well from the provided data.</p>
+</div>
+<div id="challenges" class="section level2">
+<h2>Challenges</h2>
+<ul>
+<li><strong>Insufficient Data:</strong> The dataset was too small for effective fine-tuning of a large model like LLaMA.</li>
+<li><strong>Quality of Data:</strong> The data might have had inconsistencies or errors that affected the fine-tuning process.</li>
+<li><strong>Hardware Limitations:</strong> Training on limited hardware necessitated the use of quantisation techniques, which may have impacted performance.</li>
+<li><strong>Complexity of Model:</strong> Larger models require more extensive data and computational resources to fine-tune effectively.</li>
+</ul>
+</div>
+</div>
+<div id="next-steps" class="section level1">
+<h1>Next Steps</h1>
+<div id="further-research" class="section level2">
+<h2>Further Research</h2>
+<ul>
+<li><strong>Expand Dataset:</strong> Collect more sentence pairs to improve the dataset size and quality.</li>
+<li><strong>Advanced Fine-Tuning Techniques:</strong> Experiment with techniques like transfer learning, domain adaptation, and data augmentation.</li>
+<li><strong>Open-Source Models:</strong> Investigate open-source models which might be more adaptable to fine-tuning with smaller datasets.</li>
+</ul>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>This study demonstrates the potential and limitations of using off-the-shelf and fine-tuned large language models for low-resource languages like Te Reo Māori. While OTS models such as ChatGPT and Claude showed superior performance compared to a fine-tuned LLaMA model, challenges like insufficient data and hardware constraints were significant barriers.</p>
+<div id="references" class="section level2">
+<h2>References</h2>
+<ul>
+<li>Hugging Face. (n.d.). Maori-English New Zealand Dataset. Retrieved from <a href="https://huggingface.co/datasets/jinglishi0206/Maori_English_New_Zealand" class="uri">https://huggingface.co/datasets/jinglishi0206/Maori_English_New_Zealand</a></li>
+<li>James, J., Yogarajan, V., Shields, I., Watson, C., Keegan, P., Mahelona, K., &amp; Jones, P.-L. (2022). Language models for code-switch detection of te reo Māori and English in a low-resource setting. In M. Carpuat, M.-C. de Marneffe, &amp; I. V. Meza Ruiz (Eds.), <em>Findings of the Association for Computational Linguistics: NAACL 2022</em> (pp. 650-660). Seattle, United States: Association for Computational Linguistics. <a href="https://aclanthology.org/2022.findings-naacl.49" class="uri">https://aclanthology.org/2022.findings-naacl.49</a></li>
+<li>OpenAI. (2024). ChatGPT 4.0. Retrieved from <a href="https://openai.com" class="uri">https://openai.com</a></li>
+<li>Anthropic. (2024). Claude 3.5. Retrieved from <a href="https://anthropic.com" class="uri">https://anthropic.com</a></li>
+<li>Meta. (2024). LLaMA 3.1. Retrieved from <a href="https://meta.com" class="uri">https://meta.com</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
